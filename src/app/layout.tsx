@@ -85,6 +85,7 @@ export default function RootLayout({
       <body
       className={`${helveticaNowDisplay.variable} antialiased`}
       >
+        <GoogleTagManager gtmId="GTM-TTXP42SK" />
         <LenisProvider />
         {children}
       
