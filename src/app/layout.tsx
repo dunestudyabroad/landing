@@ -3,6 +3,7 @@ import LenisProvider from '@/components/LenisProvider'
 import WhatsappChatWidget from '@/components/WhatsAppWidget/WhatsAppWidget';
 import localFont from 'next/font/local'
 import { GoogleTagManager } from '@next/third-parties/google';
+
 const helveticaNowDisplay = localFont({
   src: [
     {
