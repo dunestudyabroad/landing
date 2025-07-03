@@ -6,11 +6,12 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import Image from "next/image";
 import mapIMage from "../../../public/formMap/Frame 3384456.avif";
+import { useRouter } from "next/router";
 
 function FormComponent() {
   const [charCount, setCharCount] = useState<number>(0);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-
+  const router = useRouter();
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -51,7 +52,7 @@ function FormComponent() {
         const result = await response.json();
 
         if (result.result === "success") {
-          alert("Form submitted successfully!");
+          router.push("/thank-you");
           resetForm();
           setCharCount(0);
         }
