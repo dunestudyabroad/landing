@@ -6,7 +6,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import Image from "next/image";
 import mapIMage from "../../../public/formMap/Frame 3384456.avif";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 function FormComponent() {
   const [charCount, setCharCount] = useState<number>(0);
