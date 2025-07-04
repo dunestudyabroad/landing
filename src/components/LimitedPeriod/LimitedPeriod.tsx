@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import { Link as ScrollLink } from "react-scroll";
 
 const LimitedPeriod = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -64,9 +65,11 @@ const LimitedPeriod = () => {
               </h2>
             </div>
             <div className="flex items-center">
-              <button aria-label="Book Now for Free" className="bg-black cursor-pointer text-white lg:text-lg px-3   xl:text-[26px] font-bold lg:px-8 lg:py-3 py-2 rounded-4xl">
-                Book Now for Free
-              </button>
+              <ScrollLink to="form-section" smooth={true} duration={500}>
+                <button aria-label="Book Now for Free" className="bg-black cursor-pointer text-white lg:text-lg px-3   xl:text-[26px] font-bold lg:px-8 lg:py-3 py-2 rounded-4xl">
+                  Book Now for Free
+                </button>
+              </ScrollLink>
             </div>
           </div>
         </div>
