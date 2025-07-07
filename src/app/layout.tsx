@@ -57,7 +57,7 @@ export const metadata = {
     siteName: "Dune Abroad",
     images: [
       {
-        url: "https://duneabroad.com/og-image.jpg", // Replace with actual image
+        url: "http://localhost:3003/icon.png", // Replace with actual image
         width: 1200,
         height: 630,
         alt: "Dune Abroad Study Abroad Consultants Mangalore",
@@ -71,7 +71,7 @@ export const metadata = {
     title: "Dune Abroad | Study Abroad Consultants in Mangalore",
     description:
       "Get expert help to study abroad with Dune Abroad in Mangalore. University selection, admission process, visa guidance, and more!",
-    images: ["https://duneabroad.com/og-image.jpg"], // Replace with actual image
+    images: ["http://localhost:3003/icon.png"], // Replace with actual image
     creator: "@duneabroad",
   },
 };
