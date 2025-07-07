@@ -1,36 +1,35 @@
-import './globals.css'
-import LenisProvider from '@/components/LenisProvider'
-import WhatsappChatWidget from '@/components/WhatsAppWidget/WhatsAppWidget';
-import localFont from 'next/font/local'
-import { GoogleTagManager } from '@next/third-parties/google';
+import "./globals.css";
+import LenisProvider from "@/components/LenisProvider";
+import WhatsappChatWidget from "@/components/WhatsAppWidget/WhatsAppWidget";
+import localFont from "next/font/local";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const helveticaNowDisplay = localFont({
   src: [
     {
-      path: '../../public/fonts/HelveticaNowDisplay-Regular.ttf',
-      weight: '400',
-      style: 'normal',
+      path: "../../public/fonts/HelveticaNowDisplay-Regular.ttf",
+      weight: "400",
+      style: "normal",
     },
     {
-      path: '../../public/fonts/HelveticaNowDisplay-Medium.ttf',
-      weight: '500',
-      style: 'normal',
+      path: "../../public/fonts/HelveticaNowDisplay-Medium.ttf",
+      weight: "500",
+      style: "normal",
     },
     {
-      path: '../../public/fonts/HelveticaNowDisplay-Bold.ttf',
-      weight: '700',
-      style: 'normal',
+      path: "../../public/fonts/HelveticaNowDisplay-Bold.ttf",
+      weight: "700",
+      style: "normal",
     },
     {
-      path: '../../public/fonts/HelveticaNowDisplay-ExtraBold.ttf',
-      weight: '800',
-      style: 'normal',
+      path: "../../public/fonts/HelveticaNowDisplay-ExtraBold.ttf",
+      weight: "800",
+      style: "normal",
     },
-
   ],
-  variable: '--font-helvetica-now',
-  display: 'swap',
-})
+  variable: "--font-helvetica-now",
+  display: "swap",
+});
 
 export const metadata = {
   title: "Dune Abroad | Study Abroad Consultants in Mangalore",
@@ -43,7 +42,7 @@ export const metadata = {
     "Student Visa Assistance",
     "Overseas Education",
     "Study in UK USA Canada Australia",
-    "Best Study Abroad Agency Mangalore"
+    "Best Study Abroad Agency Mangalore",
   ],
   authors: [{ name: "Dune Abroad", url: "https://duneabroad.com" }],
   creator: "Dune Abroad",
@@ -69,8 +68,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Dune Abroad | Study Abroad Consultants in Mangalore",
-    description:
-      "Get expert help to study abroad with Dune Abroad in Mangalore. University selection, admission process, visa guidance, and more!",
+    description: "Get expert help to study abroad with Dune Abroad in Mangalore. University selection, admission process, visa guidance, and more!",
     images: ["https://dunestudyabroad.com/icon.png"], // Replace with actual image
     creator: "@duneabroad",
   },
@@ -79,18 +77,19 @@ export const metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body
-      className={`${helveticaNowDisplay.variable} antialiased`}
-      >
+      <head>
+        <link rel="icon" type="image/png" href="/icon.png" />
+      </head>
+
+      <body className={`${helveticaNowDisplay.variable} antialiased`}>
         <GoogleTagManager gtmId="GTM-TTXP42SK" />
         <LenisProvider />
         {children}
-      
       </body>
     </html>
-  )
+  );
 }
